@@ -1,0 +1,16 @@
+# Git 记忆插件的 profile 行。
+#
+# 这里**不写默认值**：留空时插件按「`$DSH_HOME/memory.config.json` → 内置默认」解析，
+# 这样用户可以用 `memory_configure` 工具在运行时改配置（无需重启）。
+# 一旦在这里写了某个字段，它就拥有最高优先级，配置文件将无法覆盖它。
+#
+# 需要固化配置时再取消注释：
+#       config:
+#         repo: ''
+#         dir: ''
+#         branch: main
+#         autoPush: true
+#         commitIntervalMs: 30000
+- insert:
+    - id: memory-git
+      name: '@liuxinye/dsh-memory-git'

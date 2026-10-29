@@ -1,0 +1,76 @@
+{
+  "name": "@liuxinye/dsh-memory-git",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Git-backed long-term memory for DeepSeek Harness: point the plugin at a git repository and the agent gets memory_write / memory_search / memory_read / memory_sync / memory_status tools over plain Markdown.",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./memory": {
+      "default": "./lib/memory.mjs"
+    },
+    "./git": {
+      "default": "./lib/git.mjs"
+    },
+    "./time": {
+      "default": "./lib/time.mjs"
+    },
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg",
+    "./config": {
+      "default": "./lib/config.mjs"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/memory.mjs",
+    "lib/config.mjs",
+    "lib/git.mjs",
+    "lib/time.mjs",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "PUBLISHING.md"
+  ],
+  "icon": "./icon.svg",
+  "scripts": {
+    "test": "node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.3 <1.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "mcp-alternative",
+    "memory",
+    "git",
+    "markdown",
+    "agent",
+    "obsidian"
+  ],
+  "license": "MIT",
+  "author": "liuxinye",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auraflame-ywt/dsh-memory-git.git"
+  },
+  "homepage": "https://github.com/auraflame-ywt/dsh-memory-git#readme",
+  "bugs": {
+    "url": "https://github.com/auraflame-ywt/dsh-memory-git/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
